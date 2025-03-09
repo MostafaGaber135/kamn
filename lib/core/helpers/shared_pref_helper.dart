@@ -92,8 +92,10 @@ class SharedPrefHelper {
   static getSecuredListString(String key) async {
     const flutterSecureStorage = FlutterSecureStorage();
     String? encodedData = await flutterSecureStorage.read(key: key);
-    if (encodedData == null) return null;
-    List<String> decodedData = List<String>.from(jsonDecode(encodedData));
+    //////////////////////////////
+    ///////////////////////////////////
+    /////////////////////////////////////
+    List<String> decodedData = List<String>.from(jsonDecode(encodedData!));
     return decodedData;
   }
 
@@ -114,12 +116,10 @@ class SharedPrefHelper {
     const flutterSecureStorage = FlutterSecureStorage();
 
     String? jsonString = await flutterSecureStorage.read(key: 'userData');
-
-    if (jsonString != null) {
-      return UserModel.fromJson(jsonString);
-    } else {
-      return null;
-    }
+//////////////////////////////
+////////////////////////////////
+//////////////////////////////////
+    return UserModel.fromJson(jsonString!);
   }
 
   static Future<void> deleteUserData() async {

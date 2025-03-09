@@ -72,17 +72,10 @@ class AvailableDatesCubit extends Cubit<AvailableDatesState> {
     if (state.startAt != null && state.endAt != null) {
       clacIntervails =
           calculateIntervals(state.startAt!, state.endAt!, state.period);
-      if (clacIntervails != null) {
-        emit(state.copyWith(
-            state: AvailableDatesStatus.intervalsCalc,
-            intervials: clacIntervails));
-      } else {
-        emit(state.copyWith(
-            state: AvailableDatesStatus.failure,
-            intervials: [],
-            erorrMessage: 'error on selecting dates please check it'));
-      }
-    } else {
+      emit(state.copyWith(
+          state: AvailableDatesStatus.intervalsCalc,
+          intervials: clacIntervails));
+        } else {
       clacIntervails = calculateIntervals(const TimeOfDay(hour: 0, minute: 0),
           const TimeOfDay(hour: 24, minute: 0), 60);
       emit(state.copyWith(

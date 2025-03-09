@@ -11,6 +11,12 @@ class Constants {
     'Entertainment',
   ];
 
+  static const catrgories = 'Catrgories';
+  static const vegan = 'Vegan';
+  static const chicken = 'Chicken';
+  static const meat = 'Meat';
+  static const fish = 'Fish';
+
   static const overview = 'Overview';
   static const salesOverView = 'Salesoverview';
   static const noConnectionErrorMessage = 'Not connected to a network!';
@@ -160,6 +166,7 @@ If you request a refund, the processing time will follow the same timeframe as o
     ),
   ];
 }
+
 class SportDetail {
   final String title;
   final Color color;

@@ -6,6 +6,7 @@ import 'package:kamn/core/di/di.dart';
 import 'package:kamn/core/routing/routes.dart';
 import 'package:kamn/gym_feature/add_gym/presentation/screens/add_gym_screen.dart';
 import 'package:kamn/gym_feature/gyms/presentation/pages/gyms_screen.dart';
+import 'package:kamn/healthy_food_features/presentation/screens/restaurant_details.dart';
 import 'package:kamn/playground_feature/authentication/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:kamn/playground_feature/authentication/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:kamn/playground_feature/payment/presentation/cubits/procced_payment_cubit/procced_payment_cubit.dart';
@@ -293,12 +294,15 @@ class AppRouter {
                   notification: settings.arguments as NotificationsModel,
                 ));
 
-                /// GYM Features
+      /// GYM Features
       case Routes.addGymScreen:
-        return MaterialPageRoute(
-            builder: (context) => const AddGymScreen());
+        return MaterialPageRoute(builder: (context) => const AddGymScreen());
       case Routes.gymScreen:
         return MaterialPageRoute(builder: (context) => const GymsScreen());
+      case Routes.restaurantDetails:
+        return MaterialPageRoute(
+            builder: (context) => const RestaurantDetails());
+
       default:
         return MaterialPageRoute(
             builder: (context) => Scaffold(

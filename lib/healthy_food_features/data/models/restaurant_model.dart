@@ -1,14 +1,19 @@
+import 'package:kamn/core/const/image_links.dart';
+import 'package:kamn/healthy_food_features/data/models/category_data.dart';
+
 class Restaurant {
   final String name;
   final String imageUrl;
   final double rating;
   final String description;
   final List<String> tags;
+  final List<Category> categories;
   final double minPrice;
   final double maxPrice;
   final int deliveryTime;
 
   Restaurant({
+    required this.categories,
     required this.name,
     required this.imageUrl,
     required this.rating,
@@ -21,6 +26,7 @@ class Restaurant {
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
+      categories: json['categories'],
       name: json['name'],
       imageUrl: json['imageUrl'],
       rating: json['rating'].toDouble(),
@@ -48,18 +54,21 @@ class Restaurant {
 
 List<Restaurant> restaurants = [
   Restaurant(
+    categories: categories,
     name: "House of Diet",
-    imageUrl: "assets/images/resturantTest.png",
+    imageUrl: ImageLinks.testrestaurant, //"assets/images/resturantTest.png",
     rating: 4.8,
-    description: "Specializes in high-protein and low-carb meals.",
+    description:
+        "Specializes in high-protein and low-carbllmealsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd.",
     tags: ["Organic Ingredients", "High-Protein", "Grain"],
     minPrice: 500,
     maxPrice: 1500,
     deliveryTime: 30,
   ),
   Restaurant(
+    categories: categories,
     name: "FitFuel Restaurant",
-    imageUrl: "assets/images/resturantTest.png",
+    imageUrl: ImageLinks.testrestaurant, //"assets/images/resturantTest.png",
     rating: 4.7,
     description: "Perfect choice for healthy eating.",
     tags: ["Meal Prep", "High-Protein", "Vegan Balance"],
@@ -68,6 +77,7 @@ List<Restaurant> restaurants = [
     deliveryTime: 35,
   ),
   Restaurant(
+    categories: categories,
     name: "FitFuel Restaurant",
     imageUrl: "assets/images/resturantTest.png",
     rating: 4.7,

@@ -13,8 +13,8 @@ class ChoosePlanScreen extends StatelessWidget {
         elevation: 0,
         leading: const BackButton(color: Colors.black),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 16),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 16),
         child: SingleChildScrollView(child: CustomSelectionHomePlan()),
       ),
     );

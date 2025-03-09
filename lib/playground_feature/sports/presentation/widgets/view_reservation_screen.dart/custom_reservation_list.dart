@@ -10,14 +10,13 @@ import 'package:kamn/playground_feature/sports/presentation/cubits/view_reservat
 import 'package:kamn/playground_feature/sports/presentation/widgets/view_reservation_screen.dart/custom_reservation_item.dart';
 
 class CustomReservationList extends StatelessWidget {
-  CustomReservationList({super.key});
+  const CustomReservationList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ViewReservationCubit, ViewReservationState>(
       listener: (context, state) {
-        if(state.isSettedData){
-        }
+        if (state.isSettedData) {}
       },
       builder: (context, state) {
         if (state.inLoading || state.inIntial) {
@@ -75,8 +74,9 @@ class CustomReservationList extends StatelessWidget {
                             .add(data[index].ground?.playgroundId ?? '');
                         await SecureStorageHelper.saveStringList(
                             playgroundIdList);
-                            await context.read<ViewReservationCubit>().addRating(data[index].ground?.playgroundId ?? '', response.rating);
-
+                        await context.read<ViewReservationCubit>().addRating(
+                            data[index].ground?.playgroundId ?? '',
+                            response.rating);
                       },
                     );
 

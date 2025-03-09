@@ -17,6 +17,13 @@ class AppPallete {
   static const Color lighterGreenColor = Color(0xffD0F5D6);
   static const Color blueGreenColor = Color(0xffC9F4D1);
   static const Color ofWhiteColor = Color(0xffF6F6F6);
+  static const Color ofWhiteColor2 = Color(0xffFEFEFE);
+  static const Color ofWhiteColor3 = Color(0xffF8F8F8);
+  static const Color ofWhiteColor4 = Color(0xffFFFFFF);
+  static const Color green = Color(0xff205B2A);
+  static const Color green2 = Color(0xff2A7737);
+  //  static const Color grayy = Color.from(alpha: 255, red: 255, green: 255, blue: 1);
+
   static const Color lgGreyColor = Color(0xffD9D9D9);
   static const Color lgWhiteColor = Color(0xffeeeeee);
   static const Color yellowColor = Color(0xffF6B000);
@@ -57,4 +64,5 @@ class AppPallete {
   static const Color lightRedColor = Color(0xffFF005E);
   static const Color lightpinkColor = Color(0xffFFDDDD);
   static const Color lighttColor2 = Color(0xffF6F6F6);
+  static const Color lighttgrey = Color(0xff777777);
 }

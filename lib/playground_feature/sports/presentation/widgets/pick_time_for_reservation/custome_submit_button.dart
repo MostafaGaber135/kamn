@@ -15,11 +15,9 @@ import 'package:kamn/playground_feature/sports/presentation/cubits/pick_time_for
 class CustomeSubmitButton extends StatelessWidget {
   final PlaygroundModel playground;
   final DateTime selectedDate;
-   CustomeSubmitButton(
+  const CustomeSubmitButton(
       {super.key, required this.playground, required this.selectedDate});
- 
 
-   
   @override
   Widget build(BuildContext context) {
     var cubit = context.read<PickTimeForReservationCubit>();
@@ -31,7 +29,6 @@ class CustomeSubmitButton extends StatelessWidget {
               disabledBackgroundColor: AppPallete.blackColor,
               backgroundColor: AppPallete.blackColor),
           onPressed: () {
-     
             // cubit.onSubmitReservation(perpareReservation(cubit));
             if (cubit.viewModel.selectedIntervals.isNotEmpty) {
               Navigator.pushNamed(context, Routes.paymentOptionsScreen,
@@ -76,8 +73,7 @@ class CustomeSubmitButton extends StatelessWidget {
               endAt: start.add(Duration(minutes: playground.period!.toInt())));
         }).toList(),
         status: 'pending',
-       price: (playground.price ?? 0) * selectedDateList.length ,
-
+        price: (playground.price ?? 0) * selectedDateList.length,
         user: context.read<AppUserCubit>().state.user);
   }
 }

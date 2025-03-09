@@ -1,4 +1,6 @@
 class Routes {
+  static const String restaurantDetails = '/r';
+
   static const String splashScreen = '/';
   static const String addServiceScreen = '/addServiceScreen';
   static const String successServiceProviderScreen =
@@ -41,8 +43,5 @@ class Routes {
   static const String editProfileScreen = '/editProfileScreen';
   static const String gymScreen = '/gymScreen';
 
-
-
-    static const String addGymScreen='/addGymScreen';
-
+  static const String addGymScreen = '/addGymScreen';
 }

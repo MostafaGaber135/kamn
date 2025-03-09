@@ -53,7 +53,7 @@ List<FoodItem> trendingFoods = [
     price: 150.0,
     calories: 250,
     rating: 4.7,
-    tags: ["Healthy", "Low-Carb"],
+    tags: ["Healthy", "Low-Carb", "lowwwww"],
     restaurantName: "Sarah's House",
     deliveryTime: 30,
   ),

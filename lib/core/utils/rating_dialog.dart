@@ -48,6 +48,7 @@ class RatingDialog extends StatefulWidget {
   final Function? onCancelled;
 
   const RatingDialog({
+    super.key,
     required this.title,
     this.message,
     this.image,
@@ -83,7 +84,7 @@ class _RatingDialogState extends State<RatingDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final _content = Stack(
+    final content = Stack(
       alignment: Alignment.topRight,
       children: <Widget>[
         ClipRRect(
@@ -113,7 +114,7 @@ class _RatingDialogState extends State<RatingDialog> {
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
                     onRatingUpdate: (rating) {
                       setState(() {
                         _response!.rating = rating;
@@ -125,8 +126,7 @@ class _RatingDialogState extends State<RatingDialog> {
                     ),
                   ),
                 ),
-                                const SizedBox(height: 10),
-
+                const SizedBox(height: 10),
                 widget.enableComment
                     ? TextField(
                         controller: _commentController,
@@ -142,7 +142,7 @@ class _RatingDialogState extends State<RatingDialog> {
                               ),
                               borderRadius: BorderRadius.circular(10)),
                           focusedBorder: OutlineInputBorder(
-                              borderSide:  BorderSide(
+                              borderSide: BorderSide(
                                 color: AppPallete.greenColor.withOpacity(.5),
                                 width: 1,
                               ),
@@ -192,13 +192,14 @@ class _RatingDialogState extends State<RatingDialog> {
       ],
     );
 
-    return AlertDialog(backgroundColor: AppPallete.whiteColor,
+    return AlertDialog(
+      backgroundColor: AppPallete.whiteColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
       titlePadding: EdgeInsets.zero,
       scrollable: true,
-      title: _content,
+      title: content,
     );
   }
 }
