@@ -9,7 +9,7 @@ class CustomFeatureSelectionList extends StatelessWidget {
   final Function toggleFeature;
   final Map<Feature, int> selectedFeatures;
 
-  CustomFeatureSelectionList({
+  const CustomFeatureSelectionList({super.key, 
     required this.features,
     required this.toggleFeature,
     required this.selectedFeatures,

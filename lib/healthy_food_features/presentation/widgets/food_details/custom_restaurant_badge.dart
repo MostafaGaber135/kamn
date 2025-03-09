@@ -15,7 +15,7 @@ class CustomRestaurantBadge extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20.r),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Colors.black26, blurRadius: 5, offset: Offset(0, 3))
             ],

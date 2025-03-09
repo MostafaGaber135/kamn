@@ -11,6 +11,8 @@ import 'package:kamn/healthy_food_features/presentation/widgets/food_details/cus
 import '../widgets/food_details/custom_order_section.dart';
 
 class FoodDetailsScreen extends StatefulWidget {
+  const FoodDetailsScreen({super.key});
+
   @override
   _FoodDetailsScreenState createState() => _FoodDetailsScreenState();
 }
@@ -90,23 +92,23 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomRestaurantBadge(),
+                      const CustomRestaurantBadge(),
                       SizedBox(height: 16.h),
                       CustomText(Constants.foodTitle, 24.sp, FontWeight.bold),
                       SizedBox(height: 8.h),
-                      CustomRatingRow(),
+                      const CustomRatingRow(),
                       SizedBox(height: 16.h),
                       CustomText(
                           Constants.detailsTitle, 18.sp, FontWeight.bold),
                       SizedBox(height: 8.h),
-                      CustomDetailsText(),
+                      const CustomDetailsText(),
                       SizedBox(height: 16.h),
                       CustomText(
                           Constants.ingredientsTitle, 18.sp, FontWeight.bold),
                       SizedBox(height: 8.h),
                       CustomIngredients(),
                       SizedBox(height: 20.h),
-                      CustomOrderSection(),
+                      const CustomOrderSection(),
                     ],
                   ),
                 ),

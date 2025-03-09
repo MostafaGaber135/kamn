@@ -8,7 +8,7 @@ class HealthyFoodScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: Text("ebrahim"),
+        title: const Text("ebrahim"),
       ),
     );
   }

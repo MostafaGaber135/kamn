@@ -47,7 +47,7 @@ class RatingDialog extends StatefulWidget {
   /// called when user cancels/closes the dialog
   final Function? onCancelled;
 
-  const RatingDialog({
+  const RatingDialog({super.key, 
     required this.title,
     this.message,
     this.image,
@@ -83,7 +83,7 @@ class _RatingDialogState extends State<RatingDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final _content = Stack(
+    final content = Stack(
       alignment: Alignment.topRight,
       children: <Widget>[
         ClipRRect(
@@ -113,7 +113,7 @@ class _RatingDialogState extends State<RatingDialog> {
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
                     onRatingUpdate: (rating) {
                       setState(() {
                         _response!.rating = rating;
@@ -198,7 +198,7 @@ class _RatingDialogState extends State<RatingDialog> {
       ),
       titlePadding: EdgeInsets.zero,
       scrollable: true,
-      title: _content,
+      title: content,
     );
   }
 }
